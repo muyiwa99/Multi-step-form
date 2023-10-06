@@ -1,0 +1,108 @@
+// Add ons page
+.main-content_addons {
+  display: none;
+  .addons-header h2 {
+    color: $marine-blue;
+    font-size: 2rem;
+  }
+  .addons-header p {
+    color: $cool-gray;
+  }
+  //   Content section
+  .addons-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 160%;
+  }
+  //   Adding the background color when the checkbox is ticked
+  .addons-selection:has(input:checked) {
+    background: $magnolia;
+    border: 2px solid $purplish-blue;
+  }
+  .addons-content .addons-selection {
+    display: inherit;
+    padding: 0.8rem 0.9rem 0.9rem 0.8rem;
+    justify-content: space-between;
+    border: 1px solid $cool-gray;
+    border-radius: 8px;
+
+    input[type="checkbox"] {
+      height: 30px;
+      width: 30px;
+      margin-block-start: 1.3rem;
+      accent-color: $purplish-blue;
+    }
+
+    .details {
+      position: relative;
+      right: 10%;
+      bottom: 0.6rem;
+    }
+
+    .details p {
+      color: $marine-blue;
+    }
+
+    .details span {
+      color: $cool-gray;
+      font-size: 0.8rem;
+    }
+  }
+
+  .buttons {
+    position: relative;
+    bottom: 2rem;
+
+    .button {
+      left: 110%;
+      top: 8rem;
+    }
+  }
+}
+
+// Mobile view
+@media (min-width: 370px) and (max-width: 800px) {
+  .main-content_addons {
+    display: none;
+    margin-inline: -1.5rem;
+    height: 60vh;
+
+    .addons-content {
+      width: 120%;
+      gap: 2rem;
+
+      .addons-selection {
+        width: max(80%, 70vw);
+      }
+    }
+
+    .buttons {
+      display: flex;
+      height: 12vh;
+      background: white;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .button,
+      .button-0 {
+        position: relative;
+        height: min-content;
+      }
+
+      .button {
+        position: relative;
+        left: 60%;
+        top: 2rem;
+      }
+
+      .button-0 {
+        top: 3rem;
+        left: 1rem;
+        font-size: 1rem;
+        color: $cool-gray;
+      }
+    }
+  }
+}

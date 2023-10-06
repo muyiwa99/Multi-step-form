@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="media.css" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <!-- main conatiner- white conatiner holding the sidebar and form -->
+    <main id="main" class="main">
+      <!-- Sidebar container  -->
+      <div class="main-sidebar">
+        <div class="main-sidebar_background">
+          <img
+            src="/assets/images/bg-sidebar-desktop.svg"
+            class="sidebar-img"
+            alt=""
+          />
+          <img
+            src="/assets/images/bg-sidebar-mobile.svg"
+            class="sidebar-img_mobile"
+            alt=""
+          />
+        </div>
+        <!-- Sidebar steps  -->
+        <div class="main-sidebar_steps">
+          <div class="step">
+            <p class="step-num active" id="step-1">1</p>
+            <div class="step-stage">
+              <p>
+                Step 1 <br />
+                <span> YOUR INFO</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <p class="step-num" id="step-2">2</p>
+            <div class="step-stage">
+              <p>
+                Step 2 <br />
+                <span> SELECT PLAN</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <p class="step-num" id="step-3">3</p>
+            <div class="step-stage">
+              <p>
+                Step 3 <br />
+                <span> ADD ONS </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <p class="step-num" id="step-4">4</p>
+            <div class="step-stage">
+              <p>
+                Step 4 <br />
+                <span> SUMMARY</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- conatiner which hold all the form pages  -->
+      <div class="main-content">
+        <!---------Personal info page--------->
+        <div class="main-content_personal">
+          <div class="personal-header">
+            <h2>Personal Info</h2>
+            <p>Please provide your name, email address and phone number</p>
+          </div>
+          <form action="" class="personal-form">
+            <div class="personal-form_field">
+              <p>Name</p>
+              <span class="span">This field is required!</span>
+
+              <input
+                type="text"
+                class="input"
+                id="name"
+                placeholder="E.g. Stephen King"
+              />
+            </div>
+
+            <div class="personal-form_field">
+              <p>Email Address</p>
+              <span class="span email-e">This field is required!</span>
+
+              <input
+                type="email"
+                id="email"
+                class="input"
+                placeholder="E.g. stephenking@lorem.com"
+              />
+            </div>
+
+            <div class="personal-form_field">
+              <p>Phone number</p>
+              <span class="span num">This field is required!</span>
+
+              <input
+                type="text"
+                id="number"
+                class="input"
+                placeholder="E.g. +1 234 567 890"
+              />
+            </div>
+            <div class="buttons">
+              <button id="button" class="button">Next Step</button>
+            </div>
+          </form>
+        </div>
+
+        <!----------------- Plan page----------->
+        <div class="main-content_plan">
+          <!-- Header -->
+          <div class="plan-header">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing</p>
+          </div>
+          <!-- Plan Content section -->
+          <div class="plan-content">
+            <div class="plan-content_selection">
+              <div class="selection-content">
+                <img src="/assets/images/icon-arcade.svg" alt="" />
+                <div class="option">
+                  <p class="test">Arcarde</p>
+
+                  <span class="monthly">$9/Mo</span>
+                  <div class="yearly">
+                    <span class="yr">$90/yr </span>
+                    <span class="f-months">2 months free</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="selection-content">
+                <img src="/assets/images/icon-advanced.svg" alt="" />
+
+                <div class="option">
+                  <p class="test">Advanced</p>
+
+                  <span class="monthly">$12/Mo</span>
+                  <div class="yearly">
+                    <span class="yr">$120/yr </span
+                    ><span class="f-months">2 months free</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="selection-content">
+                <img src="/assets/images/icon-pro.svg" alt="" />
+                <div class="option">
+                  <p class="test">Pro</p>
+
+                  <span class="monthly">$15/Mo</span>
+                  <div class="yearly">
+                    <span class="yr">$150/yr </span>
+                    <span class="f-months">2 months free</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="switch-plans">
+              <p>Monthly</p>
+              <input type="checkbox" id="switch" /><label for="switch"
+                >toggle</label
+              >
+              <p>Yearly</p>
+            </div>
+
+            <!-- <div class="toggler"></div> -->
+            <div class="buttons">
+              <button id="plan-b_0" class="button-0">Go Back</button>
+              <button id="plan-b" class="button">Next Step</button>
+            </div>
+          </div>
+        </div>
+
+        <!--------------Add-ons page----------->
+        <div class="main-content_addons">
+          <!-- header  -->
+          <div class="addons-header">
+            <h2>Pick add-ons</h2>
+            <p>Add ons help enhance your gaming experience.</p>
+          </div>
+          <!-- Content -->
+          <div class="addons-content">
+            <!-- Individual box -->
+            <div class="addons-selection">
+              <input type="checkbox" class="addons-check add-1" />
+              <div class="details">
+                <p class="d-name">Online service</p>
+                <span>Access to multiplayer games</span>
+              </div>
+              <p id="addons-1">+1$/Mo</p>
+            </div>
+            <div class="addons-selection">
+              <input type="checkbox" class="addons-check add-2" />
+              <div class="details">
+                <p class="s-name">Larger Storage</p>
+                <span>Extra 1TB of cloud save</span>
+              </div>
+              <p id="addons-2">+2$/Mo</p>
+            </div>
+            <div class="addons-selection">
+              <input type="checkbox" class="addons-check add-3" />
+              <div class="details">
+                <p class="c-name">Customizable Profile</p>
+                <span>Custom theme on your Profile</span>
+              </div>
+              <p id="addons-3">+3$/Mo</p>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="button-0" id="addons-back">Go Back</button>
+            <button class="button" id="addons-next">Next Step</button>
+          </div>
+        </div>
+        <!-----------Finish page------------->
+        <div class="main-content_finish">
+          <!-- Header -->
+          <div class="finish-header">
+            <h2>Finishing Up</h2>
+            <p>Double check evereything looks ok before confirming.</p>
+          </div>
+          <!-- Content section  -->
+          <div class="finish-content">
+            <!-- Summary field -->
+            <div class="content-field">
+              <div class="plan">
+                <span class="one"></span><span class="two"></span>
+                <a id="change" href="#">Change</a>
+              </div>
+              <div class="price" id="price"></div>
+            </div>
+            <hr />
+            <div class="content-field">
+              <div class="plan">
+                <span class="add-1_name"></span>
+              </div>
+              <div class="price" id="add-price_1"></div>
+            </div>
+            <div class="content-field">
+              <div class="plan">
+                <span class="add-2_name"></span>
+              </div>
+              <div class="price" id="add-price_2"></div>
+            </div>
+            <div class="content-field">
+              <div class="plan">
+                <span class="add-3_name"></span>
+              </div>
+              <div class="price" id="add-price_3"></div>
+            </div>
+          </div>
+          <!-- Total section -->
+          <div class="total">
+            <h2>Total <span class="t-plan">(per month)</span></h2>
+            <span class="3 totalPrice">$</span>
+          </div>
+          <!-- Buttons  -->
+          <div class="buttons">
+            <button class="button-0" id="finish-back">Go Back</button>
+            <button class="button" id="finish-next">Confirm</button>
+          </div>
+        </div>
+        <!-----------Thank-you page---------->
+        <div class="main-content_thank-you">
+          <div class="thank-you_container">
+            <div class="icon">
+              <img src="/assets/images/icon-thank-you.svg" alt="" />
+            </div>
+
+            <h2>Thank You!</h2>
+
+            <p>
+              Thanks for confirming your subscription! we hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="script-1.js"></script>
+    <script src="script-2.js"></script>
+    <script src="script-3.js"></script>
+    <script src="script-4.js"></script>
+  </body>
+</html>

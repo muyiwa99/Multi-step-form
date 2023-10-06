@@ -1,0 +1,264 @@
+@import "config";
+@import "add-ons";
+@import "finish";
+@import "thank-you";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: $magnolia;
+}
+
+// Main white container
+.main {
+  width: 70%;
+  background: $white;
+  height: 75vh;
+  margin: 6rem auto;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: start;
+  gap: 11%;
+  // flex-wrap: wrap;
+}
+
+// Sidebar
+.main-sidebar {
+  // Images
+  &_background {
+    .sidebar-img {
+      position: relative;
+      left: 0.7rem;
+      top: 0.3rem;
+      z-index: 0;
+      height: 73vh;
+    }
+    // hiding mobile image
+    .sidebar-img_mobile {
+      display: none;
+    }
+  }
+
+  //   Steps
+  &_steps {
+    position: relative;
+    bottom: 65vh;
+    left: 8%;
+    z-index: 1;
+
+    // Step container
+    .step {
+      display: flex;
+      gap: 1.3rem;
+    }
+    // Step number
+    .step-num {
+      font-size: 1.2rem;
+      border-radius: 50%;
+      padding: 4px 4px 8px 11px;
+      width: 20px;
+      height: 20px;
+      border: $white 1px solid;
+      color: $white;
+    }
+    // Active step number
+    .active {
+      background: lightblue;
+      color: black;
+      border: none;
+    }
+    // The step stage and relvent info etc 'Your info', 'select plan'
+    .step-stage {
+      color: $cool-gray;
+      margin-top: -3px;
+
+      p {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Main content pages
+.main-content {
+  // --------------Personal info page-------------------
+  &_personal {
+    display: block;
+    width: 120%;
+
+    // header
+    .personal-header h2 {
+      color: $marine-blue;
+    }
+    // Sub-header text
+    .personal-header p {
+      color: $cool-gray;
+    }
+    // Form headers
+    .personal-form p {
+      color: $marine-blue;
+    }
+    // container holding header, error message and input field
+    .personal-form_field {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      // Error message
+      .span {
+        margin: -20px 0 10px 350px;
+        visibility: hidden;
+      }
+      // Input field
+      input {
+        width: auto;
+        padding: 10px 0 15px 15px;
+        border-radius: 8px;
+        border: 1px solid $cool-gray;
+        font-size: 1.4rem;
+      }
+    }
+    // Error message
+    .personal-form .personal-form_field span {
+      color: $strawberry-red;
+    }
+
+    // Personal 'Next step' button
+  }
+
+  // -----------------Plan Page---------------
+  &_plan {
+    display: none;
+    // visibility: hidden;
+    width: 40vw; // 'Select your plan' header
+    margin-block-start: 2rem;
+    .plan-header {
+      h2 {
+        font-size: 2rem;
+        color: $marine-blue;
+      }
+      p {
+        font-size: 1rem;
+        color: $cool-gray;
+      }
+    }
+    // 'Arcade, Avdanced and pro containers
+    .plan-content_selection {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 2rem;
+      margin-block-start: 2rem;
+      flex-wrap: wrap;
+      margin-block-end: 1rem;
+      .s-checked {
+        background: $magnolia;
+        border: 2px solid black !important;
+      }
+      // Plan Selection containers
+      .selection-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border: 1px solid $cool-gray;
+        padding: 0.8rem 0 0 0.4rem;
+        width: 120px;
+        height: auto;
+        cursor: pointer;
+        border-radius: 4px;
+        // Monthly plan; auto displays
+        .monthly {
+          // display: none;
+          visibility: visible;
+        }
+        // Yearly plan; hidden initially
+        .yearly {
+          visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          color: $cool-gray;
+          span {
+            color: $marine-blue;
+          }
+        }
+      }
+      // Img inside plan box
+      .selection-content img {
+        height: 40px;
+        width: 40px;
+      }
+      // text inside plan box
+      .selection-content p {
+        font-size: 0.8rem;
+      }
+    }
+    // Buttons section
+    .buttons {
+      display: flex;
+      margin-top: 1rem;
+    }
+    // Toggler
+    .switch-plans {
+      display: inline-flex;
+      background: $magnolia;
+      margin-top: 1rem;
+      width: 100%;
+      border-radius: 8px;
+      justify-content: center;
+      gap: 1rem;
+      // checkbox input to determine the
+      input[type="checkbox"] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+
+        &:checked {
+          background: $marine-blue;
+        }
+
+        &:checked + label {
+          background: $purplish-blue;
+        }
+
+        &:checked + label::after {
+          left: calc(70% - 14px);
+        }
+      }
+      // Toggler background
+      label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 100px;
+        height: 50px;
+        background: $marine-blue;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        right: 0.7rem;
+        // toggler icon
+        &::after {
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          width: 40px;
+          height: 40px;
+          border-radius: 90px;
+          background: $white;
+          transition: 0.3s;
+        }
+
+        &:active::after {
+          width: 50px;
+        }
+      }
+    }
+  }
+}

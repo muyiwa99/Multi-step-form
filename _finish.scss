@@ -1,0 +1,137 @@
+.main-content_finish {
+  display: none;
+  margin-block-start: 2rem;
+  // header
+  .finish-header h2 {
+    font-size: 2rem;
+    color: $marine-blue;
+  }
+  // Subheader
+  .finish-header p {
+    color: $cool-gray;
+  }
+  // Content section
+  .finish-content {
+    width: 600px;
+    height: auto;
+    background-color: $magnolia;
+    border-radius: 8px;
+  }
+  // Horrizontal line
+  hr {
+    width: 85%;
+    background-color: $light-gray;
+    border: none;
+    height: 1px;
+  }
+  // Finish summarys ection (grey box)
+  .finish-content .content-field {
+    display: flex;
+    gap: 17rem;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem 0.9rem 0.4rem 0.4rem;
+    // Plan summary
+    .plan {
+      display: inherit;
+      gap: 5px;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30%;
+      // Change link
+      a {
+        text-decoration: none;
+        color: $purplish-blue;
+        &:hover {
+          border-bottom: 1px solid $purplish-blue;
+          width: 55px;
+        }
+      }
+    }
+
+    .price {
+      margin-top: 4px;
+      color: $marine-blue;
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 1rem;
+    width: 95%;
+
+    h2 {
+      font-size: 1rem;
+      color: $cool-gray;
+    }
+
+    span {
+      margin-block-start: 15px;
+      font-size: 1.5rem;
+      color: $purplish-blue;
+      font-weight: 900;
+    }
+  }
+
+  .buttons {
+    position: relative;
+    top: -1rem;
+    .button {
+      left: 26rem;
+      top: 8rem;
+      background: $purplish-blue;
+    }
+  }
+}
+
+@media (min-width: 370px) and (max-width: 800px) {
+  // Whole container
+  .main-content_finish {
+    display: none;
+    margin-inline: -1.3rem;
+
+    .finish-content {
+      width: min(120%, 70vw);
+      padding-right: 1rem;
+    }
+
+    .finish-content .content-field {
+      gap: 12rem;
+    }
+    // Total container
+    .total {
+      justify-content: start;
+      gap: 10rem;
+    }
+
+    .buttons {
+      display: flex;
+      height: 12vh;
+      background: white;
+      width: 100%;
+      position: absolute;
+
+      top: 88%;
+      left: 0;
+      .button,
+      .button-0 {
+        // position: relative;
+        height: min-content;
+      }
+
+      .button {
+        // position: relative;
+        left: 60%;
+        top: 2rem;
+      }
+
+      .button-0 {
+        top: 2.6rem;
+        left: 1rem;
+        font-size: 1rem;
+        color: $cool-gray;
+      }
+    }
+  }
+}

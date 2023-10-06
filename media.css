@@ -1,0 +1,147 @@
+.button {
+  position: relative;
+  top: 7rem;
+  left: 75%;
+  cursor: pointer;
+  padding: 13px 25px;
+  font-size: 1.2rem;
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 4px;
+}
+.button:hover {
+  background-color: hsl(243, 100%, 62%);
+}
+.button:active {
+  background-color: hsl(213, 96%, 18%);
+}
+
+.buttons {
+  position: relative;
+}
+
+#plan-b {
+  left: 65%;
+  top: 8.3rem;
+}
+
+.button-0 {
+  position: relative;
+  top: 8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.button-0:hover {
+  font-weight: 900;
+  color: hsl(213, 96%, 18%);
+  padding: 1px;
+}
+
+@media (min-width: 370px) and (max-width: 800px) {
+  .attribution {
+    display: none;
+  }
+}
+@media (min-width: 370px) and (max-width: 800px) {
+  .main {
+    height: auto;
+    padding-bottom: 3rem;
+    width: 85%;
+    margin-inline: 2.5rem;
+  }
+  .main-sidebar_background .sidebar-img {
+    display: none;
+  }
+  .main-sidebar_background .sidebar-img_mobile {
+    display: block;
+    width: min(100vw, 800px);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .main-sidebar_steps {
+    display: flex;
+    position: fixed;
+    top: 10px;
+    left: 25.5%;
+    gap: 2.2rem;
+  }
+  .main-sidebar_steps .step-stage {
+    display: none;
+  }
+  .main-content_personal {
+    display: block;
+    width: 100%;
+    margin-inline: -1rem;
+  }
+  .main-content_personal input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .main-content_personal input::placeholder {
+    font-size: 1rem;
+  }
+  .main-content_personal .personal-form_field span {
+    margin-top: -8px;
+  }
+  .main-content_personal .buttons {
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    background: white;
+    height: 12vh;
+    width: 100%;
+    z-index: 0;
+  }
+  .main-content_personal .buttons .button {
+    top: 2rem;
+  }
+  .main-content_plan {
+    display: none;
+    width: 470px;
+    margin-inline: -1rem;
+    height: 61vh;
+  }
+  .main-content_plan .plan-content_selection {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .main-content_plan .plan-content_selection .selection-content {
+    flex-direction: row;
+    width: min(95%, 75vw);
+    height: 5rem;
+    gap: 2rem;
+  }
+  .main-content_plan .plan-content_selection .selection-content p {
+    position: relative;
+    bottom: 1.7rem;
+    font-size: larger;
+  }
+  .main-content_plan .plan-content_selection .selection-content span {
+    position: relative;
+    bottom: 2.6rem;
+  }
+  .main-content_plan .buttons {
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    background: white;
+    height: 12vh;
+    width: 100%;
+    z-index: 0;
+  }
+  .main-content_plan .buttons #plan-b {
+    right: 20%;
+    top: 2rem;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .main-content_plan .buttons .button-0 {
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: hsl(231, 11%, 63%);
+  }
+}/*# sourceMappingURL=media.css.map */

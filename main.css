@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+.button {
+  position: relative;
+  top: 7rem;
+  left: 75%;
+  cursor: pointer;
+  padding: 13px 25px;
+  font-size: 1.2rem;
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 4px;
+}
+.button:hover {
+  background-color: hsl(243, 100%, 62%);
+}
+.button:active {
+  background-color: hsl(213, 96%, 18%);
+}
+
+.buttons {
+  position: relative;
+}
+
+#plan-b {
+  left: 65%;
+  top: 8.3rem;
+}
+
+.button-0 {
+  position: relative;
+  top: 8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.button-0:hover {
+  font-weight: 900;
+  color: hsl(213, 96%, 18%);
+  padding: 1px;
+}
+
+@media (min-width: 370px) and (max-width: 800px) {
+  .attribution {
+    display: none;
+  }
+}
+.main-content_addons {
+  display: none;
+}
+.main-content_addons .addons-header h2 {
+  color: hsl(213, 96%, 18%);
+  font-size: 2rem;
+}
+.main-content_addons .addons-header p {
+  color: hsl(231, 11%, 63%);
+}
+.main-content_addons .addons-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 160%;
+}
+.main-content_addons .addons-selection:has(input:checked) {
+  background: hsl(217, 100%, 97%);
+  border: 2px solid hsl(243, 100%, 62%);
+}
+.main-content_addons .addons-content .addons-selection {
+  display: inherit;
+  padding: 0.8rem 0.9rem 0.9rem 0.8rem;
+  justify-content: space-between;
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 8px;
+}
+.main-content_addons .addons-content .addons-selection input[type=checkbox] {
+  height: 30px;
+  width: 30px;
+  margin-block-start: 1.3rem;
+  accent-color: hsl(243, 100%, 62%);
+}
+.main-content_addons .addons-content .addons-selection .details {
+  position: relative;
+  right: 10%;
+  bottom: 0.6rem;
+}
+.main-content_addons .addons-content .addons-selection .details p {
+  color: hsl(213, 96%, 18%);
+}
+.main-content_addons .addons-content .addons-selection .details span {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.8rem;
+}
+.main-content_addons .buttons {
+  position: relative;
+  bottom: 2rem;
+}
+.main-content_addons .buttons .button {
+  left: 110%;
+  top: 8rem;
+}
+
+@media (min-width: 370px) and (max-width: 800px) {
+  .main-content_addons {
+    display: none;
+    margin-inline: -1.5rem;
+    height: 60vh;
+  }
+  .main-content_addons .addons-content {
+    width: 120%;
+    gap: 2rem;
+  }
+  .main-content_addons .addons-content .addons-selection {
+    width: max(80%, 70vw);
+  }
+  .main-content_addons .buttons {
+    display: flex;
+    height: 12vh;
+    background: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .main-content_addons .buttons .button,
+  .main-content_addons .buttons .button-0 {
+    position: relative;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .main-content_addons .buttons .button {
+    position: relative;
+    left: 60%;
+    top: 2rem;
+  }
+  .main-content_addons .buttons .button-0 {
+    top: 3rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: hsl(231, 11%, 63%);
+  }
+}
+.main-content_finish {
+  display: none;
+  margin-block-start: 2rem;
+}
+.main-content_finish .finish-header h2 {
+  font-size: 2rem;
+  color: hsl(213, 96%, 18%);
+}
+.main-content_finish .finish-header p {
+  color: hsl(231, 11%, 63%);
+}
+.main-content_finish .finish-content {
+  width: 600px;
+  height: auto;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 8px;
+}
+.main-content_finish hr {
+  width: 85%;
+  background-color: hsl(229, 24%, 87%);
+  border: none;
+  height: 1px;
+}
+.main-content_finish .finish-content .content-field {
+  display: flex;
+  gap: 17rem;
+  width: 100%;
+  justify-content: space-around;
+  padding: 1rem 0.9rem 0.4rem 0.4rem;
+}
+.main-content_finish .finish-content .content-field .plan {
+  display: inherit;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+}
+.main-content_finish .finish-content .content-field .plan a {
+  text-decoration: none;
+  color: hsl(243, 100%, 62%);
+}
+.main-content_finish .finish-content .content-field .plan a:hover {
+  border-bottom: 1px solid hsl(243, 100%, 62%);
+  width: 55px;
+}
+.main-content_finish .finish-content .content-field .price {
+  margin-top: 4px;
+  color: hsl(213, 96%, 18%);
+}
+.main-content_finish .total {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 1rem;
+  width: 95%;
+}
+.main-content_finish .total h2 {
+  font-size: 1rem;
+  color: hsl(231, 11%, 63%);
+}
+.main-content_finish .total span {
+  margin-block-start: 15px;
+  font-size: 1.5rem;
+  color: hsl(243, 100%, 62%);
+  font-weight: 900;
+}
+.main-content_finish .buttons {
+  position: relative;
+  top: -1rem;
+}
+.main-content_finish .buttons .button {
+  left: 26rem;
+  top: 8rem;
+  background: hsl(243, 100%, 62%);
+}
+
+@media (min-width: 370px) and (max-width: 800px) {
+  .main-content_finish {
+    display: none;
+    margin-inline: -1.3rem;
+  }
+  .main-content_finish .finish-content {
+    width: min(120%, 70vw);
+    padding-right: 1rem;
+  }
+  .main-content_finish .finish-content .content-field {
+    gap: 12rem;
+  }
+  .main-content_finish .total {
+    justify-content: start;
+    gap: 10rem;
+  }
+  .main-content_finish .buttons {
+    display: flex;
+    height: 12vh;
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 88%;
+    left: 0;
+  }
+  .main-content_finish .buttons .button,
+  .main-content_finish .buttons .button-0 {
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .main-content_finish .buttons .button {
+    left: 60%;
+    top: 2rem;
+  }
+  .main-content_finish .buttons .button-0 {
+    top: 2.6rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: hsl(231, 11%, 63%);
+  }
+}
+.main-content_thank-you {
+  margin: 8rem auto;
+  width: 90%;
+  display: none;
+}
+.main-content_thank-you .thank-you_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-content_thank-you .thank-you_container h2 {
+  font-size: 2.5rem;
+  color: hsl(213, 96%, 18%);
+}
+.main-content_thank-you .thank-you_container p {
+  width: 80%;
+  text-align: center;
+  line-height: 1.5;
+  color: hsl(231, 11%, 63%);
+}
+
+@media (min-width: 370px) and (max-width: 800px) {
+  .main-content_thank-you {
+    display: none;
+    width: 100%;
+    margin-inline: -2rem;
+  }
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: hsl(217, 100%, 97%);
+}
+
+.main {
+  width: 70%;
+  background: hsl(0, 0%, 100%);
+  height: 75vh;
+  margin: 6rem auto;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: start;
+  gap: 11%;
+}
+
+.main-sidebar_background .sidebar-img {
+  position: relative;
+  left: 0.7rem;
+  top: 0.3rem;
+  z-index: 0;
+  height: 73vh;
+}
+.main-sidebar_background .sidebar-img_mobile {
+  display: none;
+}
+.main-sidebar_steps {
+  position: relative;
+  bottom: 65vh;
+  left: 8%;
+  z-index: 1;
+}
+.main-sidebar_steps .step {
+  display: flex;
+  gap: 1.3rem;
+}
+.main-sidebar_steps .step-num {
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 4px 4px 8px 11px;
+  width: 20px;
+  height: 20px;
+  border: hsl(0, 0%, 100%) 1px solid;
+  color: hsl(0, 0%, 100%);
+}
+.main-sidebar_steps .active {
+  background: lightblue;
+  color: black;
+  border: none;
+}
+.main-sidebar_steps .step-stage {
+  color: hsl(231, 11%, 63%);
+  margin-top: -3px;
+}
+.main-sidebar_steps .step-stage p {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-sidebar_steps .step-stage p span {
+  color: hsl(0, 0%, 100%);
+}
+
+.main-content_personal {
+  display: block;
+  width: 120%;
+}
+.main-content_personal .personal-header h2 {
+  color: hsl(213, 96%, 18%);
+}
+.main-content_personal .personal-header p {
+  color: hsl(231, 11%, 63%);
+}
+.main-content_personal .personal-form p {
+  color: hsl(213, 96%, 18%);
+}
+.main-content_personal .personal-form_field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.main-content_personal .personal-form_field .span {
+  margin: -20px 0 10px 350px;
+  visibility: hidden;
+}
+.main-content_personal .personal-form_field input {
+  width: auto;
+  padding: 10px 0 15px 15px;
+  border-radius: 8px;
+  border: 1px solid hsl(231, 11%, 63%);
+  font-size: 1.4rem;
+}
+.main-content_personal .personal-form .personal-form_field span {
+  color: hsl(354, 84%, 57%);
+}
+.main-content_plan {
+  display: none;
+  width: 40vw;
+  margin-block-start: 2rem;
+}
+.main-content_plan .plan-header h2 {
+  font-size: 2rem;
+  color: hsl(213, 96%, 18%);
+}
+.main-content_plan .plan-header p {
+  font-size: 1rem;
+  color: hsl(231, 11%, 63%);
+}
+.main-content_plan .plan-content_selection {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-block-start: 2rem;
+  flex-wrap: wrap;
+  margin-block-end: 1rem;
+}
+.main-content_plan .plan-content_selection .s-checked {
+  background: hsl(217, 100%, 97%);
+  border: 2px solid black !important;
+}
+.main-content_plan .plan-content_selection .selection-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid hsl(231, 11%, 63%);
+  padding: 0.8rem 0 0 0.4rem;
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.main-content_plan .plan-content_selection .selection-content .monthly {
+  visibility: visible;
+}
+.main-content_plan .plan-content_selection .selection-content .yearly {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: hsl(231, 11%, 63%);
+}
+.main-content_plan .plan-content_selection .selection-content .yearly span {
+  color: hsl(213, 96%, 18%);
+}
+.main-content_plan .plan-content_selection .selection-content img {
+  height: 40px;
+  width: 40px;
+}
+.main-content_plan .plan-content_selection .selection-content p {
+  font-size: 0.8rem;
+}
+.main-content_plan .buttons {
+  display: flex;
+  margin-top: 1rem;
+}
+.main-content_plan .switch-plans {
+  display: inline-flex;
+  background: hsl(217, 100%, 97%);
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  justify-content: center;
+  gap: 1rem;
+}
+.main-content_plan .switch-plans input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.main-content_plan .switch-plans input[type=checkbox]:checked {
+  background: hsl(213, 96%, 18%);
+}
+.main-content_plan .switch-plans input[type=checkbox]:checked + label {
+  background: hsl(243, 100%, 62%);
+}
+.main-content_plan .switch-plans input[type=checkbox]:checked + label::after {
+  left: calc(70% - 14px);
+}
+.main-content_plan .switch-plans label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  height: 50px;
+  background: hsl(213, 96%, 18%);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  right: 0.7rem;
+}
+.main-content_plan .switch-plans label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 90px;
+  background: hsl(0, 0%, 100%);
+  transition: 0.3s;
+}
+.main-content_plan .switch-plans label:active::after {
+  width: 50px;
+}/*# sourceMappingURL=main.css.map */
