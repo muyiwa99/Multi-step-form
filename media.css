@@ -144,4 +144,54 @@
     font-size: 1rem;
     color: hsl(231, 11%, 63%);
   }
+}
+@media (min-width: 1100px) and (max-width: 1300px) {
+  .main {
+    height: 85vh;
+  }
+  .main-content_personal {
+    width: auto;
+  }
+  .main-content_personal .personal-form_field input {
+    padding: 2px 0 7.5px 7.5px;
+  }
+  .main-content_personal .span {
+    margin: -10px 0 5px 350px;
+  }
+  .main-content_personal .buttons {
+    bottom: 4rem;
+  }
+  .main-content_plan {
+    margin-block-start: 0.1rem;
+  }
+  .main-content_plan .buttons {
+    bottom: 6.5rem;
+  }
+  .main-content_addons .addons-header h2 {
+    font-size: 1.5rem;
+  }
+  .main-content_addons .addons-content .addons-selection {
+    padding: 0.2rem 0.9rem 0.9rem 0.2rem;
+  }
+  .main-content_addons .buttons {
+    bottom: 5.5rem;
+  }
+  .main-content_finish {
+    margin-block-start: -1rem;
+  }
+  .main-content_finish .finish-header h2 {
+    font-size: 1.5rem;
+  }
+  .main-content_finish .finish-content {
+    width: min(550px, 115%);
+  }
+  .main-content_finish .buttons {
+    top: -5rem;
+  }
+  .main-content_finish .buttons .button {
+    left: 22rem;
+  }
+  .main-content_thank-you {
+    margin: 4rem auto;
+  }
 }/*# sourceMappingURL=media.css.map */
